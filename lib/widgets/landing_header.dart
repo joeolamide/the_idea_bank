@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:go_router/go_router.dart';
 class LandingHeader extends StatelessWidget {
   const LandingHeader({super.key});
 
@@ -62,7 +62,7 @@ class LandingHeader extends StatelessWidget {
           const SizedBox(width: 90),
           TextButton(
             onPressed: () {
-              print("you are tapped");
+              context.push('/Sign-upPage');
             },
             child: Text(
               "Get Started",
@@ -77,12 +77,12 @@ class LandingHeader extends StatelessWidget {
             style: ButtonStyle(
               backgroundColor: MaterialStateProperty.all<Color>(Colors.blue),
               shape: MaterialStateProperty.all<OutlinedBorder>(
-               const RoundedRectangleBorder(
-                  borderRadius: BorderRadius.zero,
+                RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(4.0),
                 ),
               ),
               minimumSize: MaterialStateProperty.all<Size>(
-                const Size(15, 35),
+                const Size(50, 50),
               ),
             ),
           )

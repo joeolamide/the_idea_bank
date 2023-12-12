@@ -21,6 +21,7 @@ class SeventhColumn extends StatelessWidget {
             children: [
               Image.asset(
                 "assets/images/logo.png",
+                color: Colors.white,
                 width: 190,
                 height: 54,
               ),
@@ -30,7 +31,7 @@ class SeventhColumn extends StatelessWidget {
                   color: Colors.white,
                   fontSize: 16,
                   fontFamily: 'Circular Std',
-                  fontWeight: FontWeight.w400,
+                  fontWeight: FontWeight.bold,
                   height: 0,
                 ),
               ),

@@ -10,5 +10,8 @@ class AppColors{
   static const column_bg_color = Color(0xFFF4EEFF);
   static const container_bg_color = Color(0xFFFFF1F5);
   static const cream_color =  Color(0xFFFFF8EC);
+  static const Color hint = Color(0xFFA0A3BD);
+  static const Color label = Color(0xFF6E7191);
+
 
 }

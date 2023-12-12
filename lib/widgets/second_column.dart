@@ -3,6 +3,8 @@ import 'package:gap/gap.dart';
 import 'package:the_idea_bank/utils/color.dart';
 import 'package:the_idea_bank/widgets/big_text.dart';
 import 'package:the_idea_bank/widgets/small_text.dart';
+import 'package:go_router/go_router.dart';
+
 
 class SecondColumn extends StatelessWidget {
   const SecondColumn({super.key});
@@ -42,7 +44,7 @@ class SecondColumn extends StatelessWidget {
                   Gap(53),
                   TextButton(
                     onPressed: () {
-                      print("you are tapped");
+                      context.push('/Sign-upPage');
                     },
                     child: Text(
                       "Get Started",
@@ -58,12 +60,12 @@ class SecondColumn extends StatelessWidget {
                       backgroundColor:
                           MaterialStateProperty.all<Color>(Colors.blue),
                       shape: MaterialStateProperty.all<OutlinedBorder>(
-                        const RoundedRectangleBorder(
-                          borderRadius: BorderRadius.zero,
+                         RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(4.0),
                         ),
                       ),
                       minimumSize: MaterialStateProperty.all<Size>(
-                        const Size(15, 35),
+                        const Size(50, 50),
                       ),
                     ),
                   )
