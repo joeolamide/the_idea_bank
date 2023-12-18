@@ -1,6 +1,5 @@
 import 'dart:io';
 import 'package:flutter/material.dart';
-import 'package:image_picker/image_picker.dart';
 
 class UserAvatar extends StatefulWidget {
   final String? imageUrl;
@@ -8,23 +7,19 @@ class UserAvatar extends StatefulWidget {
   final ValueChanged<File?> onImagePicked;
   final VoidCallback onEditPressed;
 
-
   UserAvatar({
     this.imageUrl,
     this.userName,
     required this.onImagePicked,
     required this.onEditPressed,
-    //required Key key,
-
-  });
+    Key? key,
+  }) : super(key: key);
 
   @override
-  _UserAvatarState createState() => _UserAvatarState();
+  UserAvatarState createState() => UserAvatarState();
 }
 
-class _UserAvatarState extends State<UserAvatar> {
-  GlobalKey<_UserAvatarState> userAvatarKey = GlobalKey<_UserAvatarState>();
-
+class UserAvatarState extends State<UserAvatar> {
   File? _pickedImage;
 
   @override
@@ -50,9 +45,7 @@ class _UserAvatarState extends State<UserAvatar> {
           right: 0,
           child: IconButton(
             icon: Icon(Icons.edit),
-            onPressed: () {
-              _pickImage(context);
-            },
+            onPressed: widget.onEditPressed,
           ),
         ),
       ],
@@ -76,18 +69,10 @@ class _UserAvatarState extends State<UserAvatar> {
     return initials;
   }
 
-  Future<void> _pickImage(BuildContext context) async {
-    final picker = ImagePicker();
-    final pickedFile = await picker.pickImage(source: ImageSource.gallery);
-
-    if (pickedFile != null) {
-      final pickedImage = File(pickedFile.path);
-      setState(() {
-        _pickedImage = pickedImage;
-      });
-
-      // Notify the parent about the picked image
-      widget.onImagePicked(_pickedImage);
-    }
+  void onImagePicked(File? pickedImage) {
+    setState(() {
+      _pickedImage = pickedImage;
+    });
+    widget.onImagePicked(pickedImage);
   }
 }
