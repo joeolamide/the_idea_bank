@@ -10,7 +10,7 @@ class SixthColumn extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    double containerWidth = MediaQuery.of(context).size.width * 0.85;
+    double containerWidth = MediaQuery.of(context).size.width * 0.95;
     return Column(
       children: [
         Container(

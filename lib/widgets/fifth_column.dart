@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+import 'package:the_idea_bank/utils/buttons.dart';
 import 'package:the_idea_bank/utils/color.dart';
 import 'package:the_idea_bank/widgets/big_text.dart';
 import 'package:the_idea_bank/widgets/small_text.dart';
@@ -41,33 +42,39 @@ class FifthColumn extends StatelessWidget {
               SmallText(
                   text: "and enterprise-grade ideas, features, and services."),
               const Gap(30),
-              TextButton(
-                onPressed: () {
-                  print("you are tapped");
-                },
-                child: Text(
-                  "Access",
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 16,
-                    fontFamily: 'Abril Fatface',
-                    fontWeight: FontWeight.w400,
-                    height: 0.08,
-                  ),
+              Container(
+                width: 200,
+                child: BoxButton(
+                  title: "Access",
                 ),
-                style: ButtonStyle(
-                  backgroundColor:
-                      MaterialStateProperty.all<Color>(Colors.blue),
-                  shape: MaterialStateProperty.all<OutlinedBorder>(
-                    RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10.0),
-                    ),
-                  ),
-                  minimumSize: MaterialStateProperty.all<Size>(
-                    const Size(205, 55),
-                  ),
-                ),
-              )
+              ),
+              // TextButton(
+              //   onPressed: () {
+              //     print("you are tapped");
+              //   },
+              //   child: Text(
+              //     "Access",
+              //     style: TextStyle(
+              //       color: Colors.white,
+              //       fontSize: 16,
+              //       fontFamily: 'Abril Fatface',
+              //       fontWeight: FontWeight.w400,
+              //       height: 0.08,
+              //     ),
+              //   ),
+              //   style: ButtonStyle(
+              //     backgroundColor:
+              //         MaterialStateProperty.all<Color>(Colors.blue),
+              //     shape: MaterialStateProperty.all<OutlinedBorder>(
+              //       RoundedRectangleBorder(
+              //         borderRadius: BorderRadius.circular(10.0),
+              //       ),
+              //     ),
+              //     minimumSize: MaterialStateProperty.all<Size>(
+              //       const Size(205, 55),
+              //     ),
+              //   ),
+              // )
             ],
           ),
         ),

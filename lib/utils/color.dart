@@ -12,6 +12,12 @@ class AppColors{
   static const cream_color =  Color(0xFFFFF8EC);
   static const Color hint = Color(0xFFA0A3BD);
   static const Color label = Color(0xFF6E7191);
+  static const Color_active_blue = Color(0xFF406EFF);
+  static const Color_inactive_blue = Color(0x19406EFF);
+  static Color kcPrimaryColor = Color(0xff22A45D);
+  static Color kcMediumGreyColor = Color(0xff868686);
+  static Color kcLightGreyColor = Color(0xffe5e5e5);
+  static Color kcVeryLightGreyColor = Color(0xfff2f2f2);
 
 
 }
