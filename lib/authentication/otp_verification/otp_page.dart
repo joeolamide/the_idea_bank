@@ -84,8 +84,8 @@ class OtpPage extends StatelessWidget {
                         child: BoxButton(
                           title: "Verify Otp",
                           onTap: (){
-                            print("Background check");
-                            //context.push('/Profile-Page');
+                           // print("Background check");
+                            context.push('/Create-Password');
                           },
                         ),
                       ),

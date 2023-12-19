@@ -1,5 +1,6 @@
 import 'package:go_router/go_router.dart';
 import 'package:flutter/material.dart';
+import 'package:the_idea_bank/authentication/create_password/create_password_page.dart';
 import 'package:the_idea_bank/authentication/landing_page.dart';
 import 'package:the_idea_bank/authentication/login/login_page.dart';
 import 'package:the_idea_bank/authentication/otp_verification/otp_page.dart';
@@ -40,6 +41,14 @@ final GoRouter router = GoRouter(
       builder: (context, state) => OtpPage(),
 
     ),
+
+    GoRoute(
+      path: "/Create-Password",
+      builder: (context, state) => CreatePassword(),
+
+    ),
+
+
 
   ],
 );
